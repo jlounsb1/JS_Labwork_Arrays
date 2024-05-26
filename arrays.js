@@ -5,6 +5,13 @@ let array = data.split(`\n`)
 let newArray1 = array[0].split(',');
 //console.log(newArray1);
 
+//convert o lowercase
+// for(let i in newArray1) {
+//      newArray1[i].toLowerCase();
+// };
+//I was trying to lower case this here but I could not get this to work. I left my attempt here but commented out. It did not break my code when it ran, it just didn't seem to do anything.
+
+
 let newArray2 = array[1].split(',');
 //console.log(newArray2);
 
@@ -76,6 +83,26 @@ for(let i in arrayObjects){
 sum=sum/arrayObjects.length;
 console.log(`The Average age is ${sum}`);
 
+console.log(arrayObjects);
 
-//lower case the keys
+
 //convert the final set of data back to a srting.
+const csvString =[
+    [
+        'ID',
+        'Name',
+        'Occupation',
+        'Age'
+    ],
+    ...arrayObjects.map(item => [
+        item.ID,
+        item.Name,
+        item.Occupation,
+        item.Age
+    ])
+]
+.map(e =>e.join(','))
+.join("\n");
+
+console.log(csvString);
+

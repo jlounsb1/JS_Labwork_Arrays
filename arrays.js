@@ -69,5 +69,13 @@ console.log(arrayObjects);
 
 
 //find the average age using a loop.
+let sum=0;
+for(let i in arrayObjects){
+    sum=sum+Number(arrayObjects[i].Age);
+}
+sum=sum/arrayObjects.length;
+console.log(`The Average age is ${sum}`);
+
+
 //lower case the keys
 //convert the final set of data back to a srting.

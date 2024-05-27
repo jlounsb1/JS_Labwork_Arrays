@@ -24,46 +24,32 @@ let newArray4 = array[3].split(',');
 let newArray5 = array[4].split(',');
 //console.log(newArray5);
 
-console.log(array)
+
 combinedArray = [newArray1, newArray2, newArray3, newArray4, newArray5];
 console.log(combinedArray);
 
 obj1 = {};
 for(const key in newArray1) {
-    console.log(`${newArray1[key]}: ${newArray2[key]}`);
+    
     obj1[newArray1[key]] = `${newArray2[key]}`;
 }
-
-console.log(obj1);
-
 obj2 = {};
 for(const key in newArray1) {
     obj2[newArray1[key]] = `${newArray3[key]}`;
 }
-
-console.log(obj2);
-
 obj3 = {};
 for(const key in newArray1) {
     obj3[newArray1[key]] = `${newArray4[key]}`;
 }
-
-console.log(obj3);
-
 obj4 = {};
 for(const key in newArray1) {
     obj4[newArray1[key]] = `${newArray5[key]}`;
 }
-
-console.log(obj4);
-
 arrayObjects =[obj1,obj2,obj3,obj4];
 console.log(arrayObjects);
 
 //remove last element
 arrayObjects.pop();
-
-console.log(arrayObjects);
 //Create new element and add it to the end
 newObj4 = {
     ID: '7', 
@@ -83,7 +69,6 @@ for(let i in arrayObjects){
 sum=sum/arrayObjects.length;
 console.log(`The Average age is ${sum}`);
 
-console.log(arrayObjects);
 
 
 //convert the final set of data back to a srting.
